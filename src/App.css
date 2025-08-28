@@ -40,3 +40,38 @@
 .read-the-docs {
   color: #888;
 }
+
+html.is-spatial {
+  background-color: transparent;
+  --xr-background-material: transparent;
+  border-radius: 20px;
+
+  .card {
+    border-radius: 20px;
+  }
+  .count-card {
+    --xr-background-material: thick;
+
+    p {
+      --xr-background-material: transparent;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      --xr-back: 20;
+    }
+  }
+
+  .link-card {
+    --xr-background-material: translucent;
+     --xr-back: 50;
+      transform-origin: top left;
+    transform: translateZ(30px) rotateX(30deg);
+
+    .link {
+      display: block;
+      --xr-background-material: thick;
+      border-radius: 10px;
+    }
+  }
+}

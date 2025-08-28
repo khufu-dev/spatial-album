@@ -19,7 +19,7 @@ export default function FirstPage() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
+      <div className="card count-card" enable-xr>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -30,10 +30,10 @@ export default function FirstPage() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <div className="card" style={{ marginTop: "0px" }}>
+      <div className="card link-card" enable-xr>
         <h2>Open Second Page</h2>
         <p>
-          <Link to="/second-page" target="_blank">
+          <Link to="/second-page" target="_blank" enable-xr className="link">
             Open Second Page with a Link
           </Link>
         </p>
