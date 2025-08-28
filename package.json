@@ -9,7 +9,7 @@
     "build": "vite build && XR_ENV=avp vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "avp": "webspatial-builder run --base=http://localhost:5174/webspatial/avp"
+    "avp": "webspatial-builder run --base=http://localhost:5173/webspatial/avp"
   },
   "dependencies": {
     "@google/model-viewer": "^4.1.0",
@@ -20,6 +20,7 @@
     "@webspatial/vite-plugin": "^0.1.9",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.2",
     "three": "^0.179.1",
     "vite-plugin-html": "^3.2.2"
   },
