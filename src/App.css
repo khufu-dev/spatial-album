@@ -75,3 +75,7 @@ html.is-spatial {
     }
   }
 }
+
+.is-spatial .secondPage {
+  --xr-back: 200;
+}
