@@ -2,12 +2,6 @@
 
 Built using Webspatial + React + TypeScript + Vite
 
-| Description            | Command                    |
-| ---------------------- | -------------------------- |
-| Web                    | `deno task dev`            |
-| VisionOS               | `XR_ENV=avp deno task dev` |
-| VisionOS Package & Run |                            |
-
 ## Vision OS
 
 Dev server
@@ -16,7 +10,7 @@ Dev server
 deno task dev:avp
 ```
 
-Package and run
+Package and run in AVP simulator
 
 ```sh
 deno task avp
