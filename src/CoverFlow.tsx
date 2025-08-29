@@ -24,13 +24,21 @@ export default function CoverFlow() {
   return (
     <main className="coverFlow" enable-xr>
       <h1>Hello Siyaman</h1>
-      <ul className="cards">
-        {IMAGES.map((image) => (
-          <li>
-            <img draggable="false" src={image} height="600" alt="Wedding" />
-          </li>
-        ))}
-      </ul>
+      <div className="cards-wrapper">
+        <ul className="cards">
+          {IMAGES.map((image) => (
+            <li>
+              <img
+                draggable="false"
+                src={image}
+                width="600"
+                height="600"
+                alt="Wedding"
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
     </main>
   );
 }
