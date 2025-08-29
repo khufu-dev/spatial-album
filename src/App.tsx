@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FirstPage from "./FirstPage.tsx";
 import SecondPage from "./SecondPage.tsx";
-import "./App.css";
 
 export default function App() {
   return (

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { initScene } from "@webspatial/react-sdk";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
+import "./FirstPage.css";
 
 export default function FirstPage() {
   const [count, setCount] = useState(0);

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "./FirstPage.css";
 
 export default function SecondPage() {
   const [count, setCount] = useState(0);
