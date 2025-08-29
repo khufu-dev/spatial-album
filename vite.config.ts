@@ -9,12 +9,6 @@ export default defineConfig({
   plugins: [
     react(),
     webSpatial(),
-    createHtmlPlugin({
-      inject: {
-        data: {
-          XR_ENV: process.env.XR_ENV,
-        },
-      },
-    }),
+    createHtmlPlugin({ inject: { data: { XR_ENV: process.env.XR_ENV } } }),
   ],
 });
