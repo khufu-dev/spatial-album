@@ -1,5 +1,5 @@
-import { defineConfig } from 'npm:vite'
-import react from 'npm:@vitejs/plugin-react'
+import { defineConfig } from "npm:vite";
+import react from "npm:@vitejs/plugin-react";
 import webSpatial from "npm:@webspatial/vite-plugin";
 import { createHtmlPlugin } from "npm:vite-plugin-html";
 
@@ -16,4 +16,4 @@ export default defineConfig({
       },
     }),
   ],
-})
+});

@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import { initScene } from "@webspatial/react-sdk";
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 export default function FirstPage() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function FirstPage() {
       </div>
       <h1>Vite + React</h1>
       <div className="card count-card" enable-xr>
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button type="button" onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
@@ -39,20 +39,20 @@ export default function FirstPage() {
         </p>
         <p>
           <button
-            onClick={() => { 
-              initScene("secondScene", prevConfig => {
+            onClick={() => {
+              initScene("secondScene", (prevConfig) => {
                 return {
                   ...prevConfig,
                   defaultSize: { width: 500, height: 500 },
                 };
               });
-              window.open(`${__XR_ENV_BASE__}/second-page`, "secondScene");
-            }}>
+              globalThis.open(`${__XR_ENV_BASE__}/second-page`, "secondScene");
+            }}
+          >
             Open Second Page with a Button
           </button>
         </p>
       </div>
     </>
-  )
+  );
 }
-

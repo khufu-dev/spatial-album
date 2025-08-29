@@ -64,8 +64,8 @@ html.is-spatial {
 
   .link-card {
     --xr-background-material: translucent;
-     --xr-back: 50;
-      transform-origin: top left;
+    --xr-back: 50;
+    transform-origin: top left;
     transform: translateZ(30px) rotateX(30deg);
 
     .link {
