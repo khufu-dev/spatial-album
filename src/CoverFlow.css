@@ -1,0 +1,6 @@
+/* There is a bug which prevents spatial styles to work when using only element tags */
+.coverFlow {
+  --xr-background-material: translucent;
+  border-radius: 40px;
+  padding: 20px 30px;
+}
