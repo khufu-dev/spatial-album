@@ -4,7 +4,6 @@
     "dev": "deno run -A npm:vite",
     "dev:avp": "XR_ENV=avp deno run -A npm:vite",
     "build": "deno run -A npm:vite build && XR_ENV=avp deno run -A npm:vite build",
-    "lint": "eslint .",
     "preview": "deno run -A npm:vite preview",
     "avp": "deno run -A npm:@webspatial/builder/webspatial-builder run --base=http://localhost:5173/webspatial/avp"
   },
@@ -31,7 +30,8 @@
     "types": [
       "react",
       "react-dom",
-      "@types/react"
+      "@types/react",
+      "@types/node"
     ],
     "jsx": "react-jsx",
     "jsxImportSource": "@webspatial/react-sdk"

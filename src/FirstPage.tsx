@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { initScene } from "@webspatial/react-sdk";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
@@ -39,6 +39,7 @@ export default function FirstPage() {
         </p>
         <p>
           <button
+            type="button"
             onClick={() => {
               initScene("secondScene", (prevConfig) => {
                 return {
