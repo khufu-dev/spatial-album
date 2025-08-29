@@ -8,5 +8,16 @@
         "dist"
       ],
     }
-  ]
+  ],
+  "settings":
+  {
+		"LSP":
+		{
+			"Deno":
+			{
+				"enabled": true
+			}
+		},
+		"lsp_format_on_save": true
+	},
 }

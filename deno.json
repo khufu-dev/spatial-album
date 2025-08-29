@@ -19,6 +19,7 @@
     "react-dom": "npm:react-dom",
     "react-router-dom": "npm:react-router-dom",
     "three": "npm:three",
+    "@types/react": "npm:@types/react",
     "vite-plugin-html": "npm:vite-plugin-html"
   },
   "compilerOptions": {
@@ -26,6 +27,11 @@
       "dom",
       "dom.iterable",
       "deno.ns"
+    ],
+    "types": [
+      "react",
+      "react-dom",
+      "@types/react"
     ],
     "jsx": "react-jsx",
     "jsxImportSource": "@webspatial/react-sdk"
