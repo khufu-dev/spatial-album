@@ -18,6 +18,15 @@ const IMAGES = [
   "/images/IMG_3389.JPG",
   "/images/IMG_3390.JPG",
   "/images/IMG_3392.JPG",
+  // "/images/coverflow--Out-Of-the-Dark-Cover-550x550.jpg",
+  // "/images/coverflow--2020-06-07-Marley-Carroll-Single-Blue-550x550.jpg",
+  // "/images/coverflow--Deep-Dive-EP-Cover-550x550.jpg",
+  // "/images/coverflow--Out-Of-the-Dark-Cover-550x550.jpg",
+  // "/images/coverflow--2020-06-07-Marley-Carroll-Single-Blue-550x550.jpg",
+  // "/images/coverflow--Deep-Dive-EP-Cover-550x550.jpg",
+  // "/images/coverflow--Out-Of-the-Dark-Cover-550x550.jpg",
+  // "/images/coverflow--2020-06-07-Marley-Carroll-Single-Blue-550x550.jpg",
+  // "/images/coverflow--Deep-Dive-EP-Cover-550x550.jpg",
 ] as const;
 
 export default function CoverFlow() {
@@ -31,8 +40,8 @@ export default function CoverFlow() {
               <img
                 draggable="false"
                 src={image}
-                width="600"
-                height="600"
+                width="1200"
+                height="1200"
                 alt="Wedding"
               />
             </li>

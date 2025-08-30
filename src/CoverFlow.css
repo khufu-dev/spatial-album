@@ -1,5 +1,17 @@
 :root {
-  --cover-size: 600px;
+  --cover-size: 15rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --cover-size: 9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --cover-size: 6rem;
+  }
 }
 
 /* Animation that rotates the cover */
@@ -21,44 +33,62 @@
   }
 }
 
-/* Animation that adjusts z-index */
-@keyframes adjust-z-index {
-  0% { z-index: 1; }
-  50% { z-index: 100; /* When at the center, be on top */ }
-  100% { z-index: 1; }
+.cards-wrapper, .cards-wrapper * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-/* There is a bug which prevents spatial styles to work when using only element tags */
-.coverFlow {
-  --xr-background-material: translucent;
-  /*border-radius: 40px;*/
-  /*padding: 20px 30px;*/
+.cards-wrapper {
+  overflow-x: scroll;
+  --size: 6;
+  min-height: calc(var(--cover-size) * 2.5);
+  width: calc(var(--cover-size) * var(--size));
+  margin: 0 auto;
+  padding: calc(var(--cover-size) / 3 * 2) 0;
+  position: relative;
+  perspective: 40em;
+}
 
-  /* Container setup */
-  .cards-wrapper {
-  }
+.cards {
+  list-style: none;
+  /* width: 100%; */
+  white-space: nowrap;
+  transform-style: preserve-3d;
+}
 
-  .cards {
-    list-style: none;
-    white-space: nowrap;
-    max-width: calc(var(--cover-size) * 6);
-    overflow: scroll;
-    /*scroll-snap-type: x mandatory;*/
-  }
+.cards li {
+  display: inline-block;
+  width: var(--cover-size);
+  height: var(--cover-size);
+  transform-style: preserve-3d;
+}
+/* Because the total size is 6, with 1 cover in the middle, there’s space for 5 left … so 2.5 on each side */
+/* Didn’t work (on the right): `calc(50% - (var(--cover-size) / 2));` */
+.cards li:first-of-type {
+  margin-left: calc(50% - var(--cover-size) / 2);
+}
+.cards li:last-of-type {
+  margin-right: calc(50% - var(--cover-size) / 2);
+}
 
-  /* List item setup */
-  .cards li {
-    display: inline-block;
-    width: var(--cover-size);
-    aspect-ratio: 1;
-    /*scroll-snap-align: center;*/
-  }
+.cards li img {
+  display: block;
+  width: var(--cover-size);
+  height: var(--cover-size);
+  object-fit: contain;
 
-  /* Image styling and animation */
-  .cards li img {
-    object-fit: contain;
-    /* Reflection */
-    /*width: 100%;
-    height: auto;
-    -webkit-box-reflect: below 0.5em linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.25));*/
+  -webkit-box-reflect: below 0.5em
+    linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
+
+  /* Track this element as it intersects the scrollport */
+  animation: linear rotate-cover both;
+  animation-timeline: view(inline);
+
+  transform: translateX(-100%) rotateY(-45deg); /* Prevent FOUC with polfyill */
+  transform-style: preserve-3d;
+  will-change: transform;
+
+  position: relative;
+  user-select: none;
 }
