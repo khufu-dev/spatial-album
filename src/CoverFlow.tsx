@@ -32,22 +32,19 @@ const IMAGES = [
 export default function CoverFlow() {
   return (
     <main className="coverFlow" enable-xr>
-      <h1>Hello Siyaman</h1>
-      <div className="cards-wrapper">
-        <ul className="cards">
-          {IMAGES.map((image) => (
-            <li>
-              <img
-                draggable="false"
-                src={image}
-                width="1200"
-                height="1200"
-                alt="Wedding"
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul className="cards">
+        {IMAGES.map((image) => (
+          <li>
+            <img
+              draggable="false"
+              src={image}
+              width="1200"
+              height="1200"
+              alt="Wedding"
+            />
+          </li>
+        ))}
+      </ul>
     </main>
   );
 }

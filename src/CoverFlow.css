@@ -33,13 +33,13 @@
   }
 }
 
-.cards-wrapper, .cards-wrapper * {
+.coverFlow, .coverFlow * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-.cards-wrapper {
+.coverFlow {
   overflow-x: scroll;
   --size: 6;
   min-height: calc(var(--cover-size) * 2.5);
