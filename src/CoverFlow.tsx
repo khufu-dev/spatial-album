@@ -41,8 +41,8 @@ export default function CoverFlow() {
   return (
     <main className="coverFlow" enable-xr>
       <ul className="cards">
-        {IMAGES.map((image) => (
-          <li>
+        {IMAGES.map((image, index) => (
+          <li key={index}>
             <img
               draggable="false"
               src={image}

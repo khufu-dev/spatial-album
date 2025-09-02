@@ -63,7 +63,8 @@
   height: var(--cover-size);
   transform-style: preserve-3d;
 }
-/* Because the total size is 6, with 1 cover in the middle, there’s space for 5 left … so 2.5 on each side */
+/* Because the total size is 6, with 1 cover in the middle, there’s space for 
+5 left … so 2.5 on each side */
 /* Didn’t work (on the right): `calc(50% - (var(--cover-size) / 2));` */
 .cards li:first-of-type {
   margin-left: calc(50% - var(--cover-size) / 2);
@@ -85,7 +86,8 @@
   animation: linear rotate-cover both;
   animation-timeline: view(inline);
 
-  transform: translateX(-100%) rotateY(-45deg); /* Prevent FOUC with polfyill */
+  /* Prevent FOUC with polfyill */
+  transform: translateX(-100%) rotateY(-45deg); 
   transform-style: preserve-3d;
   will-change: transform;
 
