@@ -17,21 +17,27 @@
 /* Animation that rotates the cover */
 @keyframes rotate-cover {
   0% {
-    transform: translateX(-100%) rotateY(-45deg);
+    transform: translateX(-100%) rotateY(-55deg);
   }
-  35% {
-    transform: translateX(0) rotateY(-45deg);
+  38% {
+    transform: translateX(0) rotateY(-55deg);
   }
   50% {
     transform: rotateY(0deg) translateZ(1em) scale(1.5);
   }
-  65% {
-    transform: translateX(0) rotateY(45deg);
+  62% {
+    transform: translateX(0) rotateY(55deg);
   }
   100% {
-    transform: translateX(100%) rotateY(45deg);
+    transform: translateX(100%) rotateY(55deg);
   }
 }
+
+@keyframes adjust-z-index {
+   0%   { z-index: 1; }
+   50%  { z-index: 100; /* when centered, bring to front */ }
+   100% { z-index: 1; }
+ }
 
 .coverFlow, .coverFlow * {
   box-sizing: border-box;
@@ -62,6 +68,12 @@
   width: var(--cover-size);
   height: var(--cover-size);
   transform-style: preserve-3d;
+
+  view-timeline-name: --li-in-and-out-of-view;
+  view-timeline-axis: inline;
+  animation: adjust-z-index linear both;
+  animation-timeline: --li-in-and-out-of-view;
+  perspective: 40em;
 }
 /* Because the total size is 6, with 1 cover in the middle, there’s space for 
 5 left … so 2.5 on each side */
@@ -84,7 +96,7 @@
 
   /* Track this element as it intersects the scrollport */
   animation: linear rotate-cover both;
-  animation-timeline: view(inline);
+  animation-timeline: --li-in-and-out-of-view;
 
   /* Prevent FOUC with polfyill */
   transform: translateX(-100%) rotateY(-45deg); 
