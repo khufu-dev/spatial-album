@@ -1,4 +1,6 @@
 {
+  "name": "Spatial Album",
+  "short_name": "Album",
   "xr_main_scene": {
     "default_size": {
       "width": 1300,
