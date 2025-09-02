@@ -1,3 +1,4 @@
+import "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
 import "./CoverFlow.css";
 
 import IMG_3394 from "./assets/IMG_3394.JPG";
