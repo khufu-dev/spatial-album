@@ -21,17 +21,8 @@
     "vite-plugin-html": "npm:vite-plugin-html"
   },
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "deno.ns"
-    ],
-    "types": [
-      "react",
-      "react-dom",
-      "@types/react",
-      "@types/node"
-    ],
+    "lib": ["dom", "dom.iterable", "deno.ns"],
+    "types": ["react", "react-dom", "@types/react", "@types/node"],
     "jsx": "react-jsx",
     "jsxImportSource": "@webspatial/react-sdk"
   },

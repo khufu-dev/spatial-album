@@ -34,10 +34,16 @@
 }
 
 @keyframes adjust-z-index {
-   0%   { z-index: 1; }
-   50%  { z-index: 100; /* when centered, bring to front */ }
-   100% { z-index: 1; }
- }
+  0% {
+    z-index: 1;
+  }
+  50% {
+    z-index: 100; /* when centered, bring to front */
+  }
+  100% {
+    z-index: 1;
+  }
+}
 
 .coverFlow, .coverFlow * {
   box-sizing: border-box;
@@ -69,7 +75,7 @@
   width: var(--cover-size);
   height: var(--cover-size);
   transform-style: preserve-3d;
-  scroll-snap-align: center; 
+  scroll-snap-align: center;
 
   view-timeline-name: --li-in-and-out-of-view;
   view-timeline-axis: inline;
@@ -101,7 +107,7 @@
   animation-timeline: --li-in-and-out-of-view;
 
   /* Prevent FOUC with polfyill */
-  transform: translateX(-100%) rotateY(-45deg); 
+  transform: translateX(-100%) rotateY(-45deg);
   transform-style: preserve-3d;
   will-change: transform;
 
