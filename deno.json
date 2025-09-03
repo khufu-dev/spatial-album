@@ -8,17 +8,11 @@
     "avp": "deno run -A npm:@webspatial/builder/webspatial-builder run --base=http://localhost:5173/webspatial/avp"
   },
   "imports": {
-    "@google/model-viewer": "npm:@google/model-viewer",
-    "@webspatial/builder": "npm:@webspatial/builder",
-    "@webspatial/core-sdk": "npm:@webspatial/core-sdk",
     "@webspatial/platform-visionos": "npm:@webspatial/platform-visionos",
     "@webspatial/react-sdk": "npm:@webspatial/react-sdk",
-    "@webspatial/vite-plugin": "npm:@webspatial/vite-plugin",
     "react": "npm:react",
     "react-dom": "npm:react-dom",
-    "three": "npm:three",
-    "@types/react": "npm:@types/react",
-    "vite-plugin-html": "npm:vite-plugin-html"
+    "@types/react": "npm:@types/react"
   },
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "deno.ns"],
