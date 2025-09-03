@@ -47,6 +47,7 @@
 
 .coverFlow {
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   --size: 6;
   min-height: calc(var(--cover-size) * 2.5);
   /*width: calc(var(--cover-size) * var(--size));*/
@@ -68,6 +69,7 @@
   width: var(--cover-size);
   height: var(--cover-size);
   transform-style: preserve-3d;
+  scroll-snap-align: center; 
 
   view-timeline-name: --li-in-and-out-of-view;
   view-timeline-axis: inline;
