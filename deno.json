@@ -16,7 +16,6 @@
     "@webspatial/vite-plugin": "npm:@webspatial/vite-plugin",
     "react": "npm:react",
     "react-dom": "npm:react-dom",
-    "react-router-dom": "npm:react-router-dom",
     "three": "npm:three",
     "@types/react": "npm:@types/react",
     "vite-plugin-html": "npm:vite-plugin-html"
