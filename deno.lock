@@ -1,15 +1,18 @@
 {
   "version": "5",
   "specifiers": {
+    "npm:@google/model-viewer@*": "4.1.0_three@0.170.0",
     "npm:@types/node@*": "24.2.0",
     "npm:@types/react@*": "19.1.12",
     "npm:@vitejs/plugin-react@*": "5.0.1_vite@7.1.3__picomatch@4.0.3_@babel+core@7.28.3_@types+node@24.2.0",
     "npm:@webspatial/builder@*": "1.0.2_@types+node@24.2.0",
+    "npm:@webspatial/core-sdk@*": "1.0.2",
     "npm:@webspatial/platform-visionos@*": "1.0.2",
     "npm:@webspatial/react-sdk@*": "1.0.2_@webspatial+core-sdk@1.0.2_react@19.1.1_react-dom@19.1.1__react@19.1.1_three@0.170.0",
     "npm:@webspatial/vite-plugin@*": "0.1.9_vite@7.1.3__picomatch@4.0.3_@types+node@24.2.0",
     "npm:react-dom@*": "19.1.1_react@19.1.1",
     "npm:react@*": "19.1.1",
+    "npm:three@*": "0.170.0",
     "npm:vite-plugin-html@*": "3.2.2_vite@7.1.3__picomatch@4.0.3_@types+node@24.2.0",
     "npm:vite@*": "7.1.3_picomatch@4.0.3_@types+node@24.2.0"
   },
@@ -2520,11 +2523,17 @@
   },
   "workspace": {
     "dependencies": [
+      "npm:@google/model-viewer@*",
       "npm:@types/react@*",
+      "npm:@webspatial/builder@*",
+      "npm:@webspatial/core-sdk@*",
       "npm:@webspatial/platform-visionos@*",
       "npm:@webspatial/react-sdk@*",
+      "npm:@webspatial/vite-plugin@*",
       "npm:react-dom@*",
-      "npm:react@*"
+      "npm:react@*",
+      "npm:three@*",
+      "npm:vite-plugin-html@*"
     ]
   }
 }

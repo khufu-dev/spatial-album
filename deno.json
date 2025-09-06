@@ -10,11 +10,17 @@
     "publish": "deno run -A npm:@webspatial/builder/webspatial-builder publish --base= --bundle-id=com.picoxr.spatialalbum --teamId=KQNC4RNTJN --version=$XR_VERSION --u=$XR_DEV_NAME --p=$XR_DEV_PASSWORD"
   },
   "imports": {
+    "@google/model-viewer": "npm:@google/model-viewer",
+    "@webspatial/builder": "npm:@webspatial/builder",
+    "@webspatial/core-sdk": "npm:@webspatial/core-sdk",
     "@webspatial/platform-visionos": "npm:@webspatial/platform-visionos",
     "@webspatial/react-sdk": "npm:@webspatial/react-sdk",
+    "@webspatial/vite-plugin": "npm:@webspatial/vite-plugin",
     "react": "npm:react",
     "react-dom": "npm:react-dom",
-    "@types/react": "npm:@types/react"
+    "three": "npm:three",
+    "@types/react": "npm:@types/react",
+    "vite-plugin-html": "npm:vite-plugin-html"
   },
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "deno.ns"],
