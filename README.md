@@ -30,3 +30,10 @@ server
 ```sh
 deno task avp
 ```
+
+Build and bundle visionOS app
+
+```sh
+deno task build:avp
+```
+
