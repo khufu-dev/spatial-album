@@ -3,10 +3,10 @@
   "tasks": {
     "dev": "deno run -A npm:vite",
     "dev:avp": "XR_ENV=avp deno run -A npm:vite",
-    "build": "deno run -A npm:vite build && XR_ENV=avp deno run -A npm:vite build",
-    "preview": "deno run -A npm:vite preview",
     "avp": "deno run -A npm:@webspatial/builder/webspatial-builder run --base=http://localhost:5173/webspatial/avp",
+    "build": "deno run -A npm:vite build && XR_ENV=avp deno run -A npm:vite build",
     "build:avp": "deno task build && deno run -A npm:@webspatial/builder/webspatial-builder build --base= --bundle-id=com.picoxr.spatialalbum --teamId=KQNC4RNTJN",
+    "preview": "deno run -A npm:vite preview",
     "publish": "deno run -A npm:@webspatial/builder/webspatial-builder publish --base= --bundle-id=com.picoxr.spatialalbum --teamId=KQNC4RNTJN --version=$XR_VERSION --u=$XR_DEV_NAME --p=$XR_DEV_PASSWORD"
   },
   "imports": {
