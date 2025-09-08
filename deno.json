@@ -1,6 +1,7 @@
 {
   "version": "0.0.1",
   "tasks": {
+    "clean": "rm -rf build dist node_modules",
     "dev": "deno run -A npm:vite",
     "dev:avp": "XR_ENV=avp deno run -A npm:vite",
     "avp": "deno run -A npm:@webspatial/builder/webspatial-builder run --base=http://localhost:5173/webspatial/avp",
