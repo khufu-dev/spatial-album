@@ -17,7 +17,7 @@
     "@webspatial/react-sdk": "npm:@webspatial/react-sdk",
     "react": "npm:react",
     "react-dom": "npm:react-dom",
-    "@types/react": "npm:@types/react",
+    "@types/react": "npm:@types/react"
   },
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "deno.ns"],

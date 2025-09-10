@@ -36,4 +36,3 @@ Build and bundle visionOS app
 ```sh
 deno task build:avp
 ```
-
