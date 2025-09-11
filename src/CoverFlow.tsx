@@ -7,13 +7,7 @@ export default function CoverFlow() {
       <ul className="cards">
         {images.map((image, index) => (
           <li key={index}>
-            <img
-              draggable="false"
-              src={image}
-              width="1200"
-              height="1200"
-              alt="Wedding"
-            />
+            <img draggable="false" src={image} alt="Wedding" />
           </li>
         ))}
       </ul>

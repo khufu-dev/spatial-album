@@ -56,7 +56,6 @@
   scroll-snap-type: x mandatory;
   --size: 6;
   min-height: calc(var(--cover-size) * 2.5);
-  /*width: calc(var(--cover-size) * var(--size));*/
   margin: 0 auto;
   padding: calc(var(--cover-size) / 3 * 2) 0;
   position: relative;
@@ -65,7 +64,6 @@
 
 .cards {
   list-style: none;
-  /* width: 100%; */
   white-space: nowrap;
   transform-style: preserve-3d;
 }
@@ -85,7 +83,6 @@
 }
 /* Because the total size is 6, with 1 cover in the middle, there’s space for 
 5 left … so 2.5 on each side */
-/* Didn’t work (on the right): `calc(50% - (var(--cover-size) / 2));` */
 .cards li:first-of-type {
   margin-left: calc(50% - var(--cover-size) / 2);
 }
