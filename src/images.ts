@@ -1,36 +1,26 @@
-import IMG_3394 from "./assets/IMG_3394.JPG";
-import IMG_0412 from "./assets/IMG_0412.jpg";
-import IMG_3008 from "./assets/IMG_3008.PNG";
-import IMG_3368 from "./assets/IMG_3368.JPG";
-import IMG_3372 from "./assets/IMG_3372.JPG";
-import IMG_3373 from "./assets/IMG_3373.JPG";
-import IMG_3374 from "./assets/IMG_3374.JPG";
-import IMG_3375 from "./assets/IMG_3375.JPG";
-import IMG_3377 from "./assets/IMG_3377.JPG";
-import IMG_3381 from "./assets/IMG_3381.JPG";
-import IMG_3385 from "./assets/IMG_3385.JPG";
-import IMG_3387 from "./assets/IMG_3387.JPG";
-import IMG_3388 from "./assets/IMG_3388.JPG";
-import IMG_3389 from "./assets/IMG_3389.JPG";
-import IMG_3390 from "./assets/IMG_3390.JPG";
-import IMG_3392 from "./assets/IMG_3392.JPG";
+import Photos_Of_Weddings_7 from "./assets/Photos-Of-Weddings-7.jpg.webp";
+import Photos_Of_Weddings_17 from "./assets/Photos-Of-Weddings-17.jpg.webp";
+import Photos_Of_Weddings_21 from "./assets/Photos-Of-Weddings-21.jpg.webp";
+import Photos_Of_Weddings_27 from "./assets/Photos-Of-Weddings-27.jpg.webp";
+import Photos_Of_Weddings_33 from "./assets/Photos-Of-Weddings-33.jpg.webp";
+import Photos_Of_Weddings_37 from "./assets/Photos-Of-Weddings-37.jpg.webp";
+import Photos_Of_Weddings_46 from "./assets/Photos-Of-Weddings-46.jpg.webp";
+import Photos_Of_Weddings_102 from "./assets/Photos-Of-Weddings-102.jpg.webp";
+import Photos_Of_Weddings_109 from "./assets/Photos-Of-Weddings-109.jpg.webp";
+import Photos_Of_Weddings_118 from "./assets/Photos-Of-Weddings-118.jpg.webp";
+import Photos_Of_Weddings_137 from "./assets/Photos-Of-Weddings-137.jpg.webp";
 
 const IMAGES = [
-  IMG_3394,
-  IMG_0412,
-  IMG_3008,
-  IMG_3368,
-  IMG_3372,
-  IMG_3373,
-  IMG_3374,
-  IMG_3375,
-  IMG_3377,
-  IMG_3381,
-  IMG_3385,
-  IMG_3387,
-  IMG_3388,
-  IMG_3389,
-  IMG_3390,
-  IMG_3392,
+  Photos_Of_Weddings_7,
+  Photos_Of_Weddings_17,
+  Photos_Of_Weddings_21,
+  Photos_Of_Weddings_27,
+  Photos_Of_Weddings_33,
+  Photos_Of_Weddings_37,
+  Photos_Of_Weddings_46,
+  Photos_Of_Weddings_102,
+  Photos_Of_Weddings_109,
+  Photos_Of_Weddings_118,
+  Photos_Of_Weddings_137,
 ] as const;
 export default IMAGES;
