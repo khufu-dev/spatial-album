@@ -3,11 +3,11 @@ import "./CoverFlow.css";
 
 export default function CoverFlow() {
   return (
-    <main className="coverFlow" enable-xr>
+    <main className="coverFlow">
       <ul className="cards">
         {images.map((image, index) => (
           <li key={index}>
-            <img draggable="false" src={image} alt="Wedding" />
+            <img draggable="false" src={image} alt="Wedding" enable-xr />
           </li>
         ))}
       </ul>
