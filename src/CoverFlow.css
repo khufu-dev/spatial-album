@@ -1,114 +1,18 @@
-:root {
-  --cover-size: 15rem;
-}
-
-@media (max-width: 1024px) {
-  :root {
-    --cover-size: 9rem;
-  }
-}
-
-@media (max-width: 600px) {
-  :root {
-    --cover-size: 6rem;
-  }
-}
-
-/* Animation that rotates the cover */
-@keyframes rotate-cover {
-  0% {
-    transform: translateX(-100%) rotateY(-55deg);
-  }
-  38% {
-    transform: translateX(0) rotateY(-55deg);
-  }
-  50% {
-    transform: rotateY(0deg) translateZ(1em) scale(1.5);
-  }
-  62% {
-    transform: translateX(0) rotateY(55deg);
-  }
-  100% {
-    transform: translateX(100%) rotateY(55deg);
-  }
-}
-
-@keyframes adjust-z-index {
-  0% {
-    z-index: 1;
-  }
-  50% {
-    z-index: 100; /* when centered, bring to front */
-  }
-  100% {
-    z-index: 1;
-  }
-}
-
-.coverFlow, .coverFlow * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.coverFlow {
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  --size: 6;
-  min-height: calc(var(--cover-size) * 2.5);
-  margin: 0 auto;
-  padding: calc(var(--cover-size) / 3 * 2) 0;
-  position: relative;
-  perspective: 40em;
-}
-
 .cards {
   list-style: none;
   white-space: nowrap;
-  transform-style: preserve-3d;
 }
 
-.cards li {
+li {
   display: inline-block;
-  width: var(--cover-size);
-  height: var(--cover-size);
-  transform-style: preserve-3d;
-  scroll-snap-align: center;
-
-  view-timeline-name: --li-in-and-out-of-view;
-  view-timeline-axis: inline;
-  animation: adjust-z-index linear both;
-  animation-timeline: --li-in-and-out-of-view;
-  perspective: 40em;
-}
-/* Because the total size is 6, with 1 cover in the middle, there’s space for 
-5 left … so 2.5 on each side */
-.cards li:first-of-type {
-  margin-left: calc(50% - var(--cover-size) / 2);
-}
-.cards li:last-of-type {
-  margin-right: calc(50% - var(--cover-size) / 2);
+  width: 15rem;
+  height: 15rem;
 }
 
-.cards li img {
-  display: block;
-  width: var(--cover-size);
-  height: var(--cover-size);
+img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-
-  -webkit-box-reflect: below 0.5em
-    linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
-
-  /* Track this element as it intersects the scrollport */
-  animation: linear rotate-cover both;
-  animation-timeline: --li-in-and-out-of-view;
-
-  /* Prevent FOUC with polfyill */
-  transform: translateX(-100%) rotateY(-45deg);
-  transform-style: preserve-3d;
-  will-change: transform;
-
-  position: relative;
   user-select: none;
   border-radius: 1em;
 }
