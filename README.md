@@ -43,4 +43,6 @@ deno task avp
 ```sh
 deno task build:avp
 ```
-5. Open the Xcode project in `node_modules/@webspatial/platform-visionos` and deploy the app to the Simulator or device
+
+5. Open the Xcode project in `node_modules/@webspatial/platform-visionos` and
+   deploy the app to the Simulator or device
