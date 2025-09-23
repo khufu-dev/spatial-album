@@ -7,16 +7,16 @@ space.
 
 ![Screenshot](./doc/screenshot.png)
 
-## Getting Started
+# Getting Started
 
-### Requirements
+## Requirements
 
 - [Deno](https://deno.com)
 - [WebSpatial](https://webspatial.dev)
 - [Safari 26](https://developer.apple.com/documentation/safari-release-notes/safari-26-release-notes)
 - [Xcode 26](https://developer.apple.com/xcode/) with Vision Pro simulator
 
-### Vision OS
+## Vision OS
 
 Run development server
 
@@ -31,8 +31,16 @@ server
 deno task avp
 ```
 
-Build and bundle visionOS app
+### Deploy to Vision Pro
+
+1. [Create an Apple Developer account](https://developer.apple.com/programs/enroll/)
+2. [Register a team and App ID](https://developer.apple.com/help/account/identifiers/register-an-app-id/)
+   in the Apple Developer portal
+3. Replace the `teamId` and `bundle-id` values in the `build:avp` Deno task from
+   the values obtained in step 2
+4. Build and bundle visionOS app
 
 ```sh
 deno task build:avp
 ```
+5. Open the Xcode project in `node_modules/@webspatial/platform-visionos` and deploy the app to the Simulator or device
