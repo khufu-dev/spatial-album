@@ -18,8 +18,8 @@
     "avp": "deno run -P=vite npm:@webspatial/builder/webspatial-builder run --base=http://localhost:5173/webspatial/avp",
     "build": "deno run -P=vite npm:vite build && XR_ENV=avp deno run -P=vite npm:vite build",
     "build:avp": "deno task build && deno run -P=vite npm:@webspatial/builder/webspatial-builder build --base= --bundle-id=com.picoxr.spatialalbum --teamId=KQNC4RNTJN",
-    "preview": "deno run -P=vite npm:vite preview"
-    // "publish": "deno run -P=vite npm:@webspatial/builder/webspatial-builder publish --base= --bundle-id=com.picoxr.spatialalbum --teamId=KQNC4RNTJN --version=$XR_VERSION --u=$XR_DEV_NAME --p=$XR_DEV_PASSWORD"
+    "preview": "deno run -P=vite npm:vite preview",
+    "publish": "deno run -P=vite npm:@webspatial/builder/webspatial-builder publish --base= --bundle-id=com.picoxr.spatialalbum --teamId=KQNC4RNTJN --version=1.0.0 --u=$(op read op://Private/Apple/username) --p=$(op read op://Private/Apple/spatial-album-password)"
   },
   "imports": {
     "@webspatial/builder": "npm:@webspatial/builder",

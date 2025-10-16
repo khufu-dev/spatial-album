@@ -46,3 +46,21 @@ deno task build:avp
 
 5. Open the Xcode project in `node_modules/@webspatial/platform-visionos` and
    deploy the app to the Simulator or device
+
+### Publish to Apple App Store
+
+1. First
+   [create a new App record](https://developer.apple.com/help/app-store-connect/create-an-app-record/add-a-new-app/)
+   in [App Store Connect](https://appstoreconnect.apple.com/apps). Make sure to
+   match the paramaters in the `publish` command
+2. [Install and setup 1Password CLI](https://developer.1password.com/docs/cli/get-started/).
+   The username and password for the next step will be securely fetched from
+   1Password
+3. Run the publish command to submit the app to App Store Connect
+
+```sh
+deno task publish
+```
+
+4. Submit the app to Test Flight to verify with testers or submit for App Store
+   review.
