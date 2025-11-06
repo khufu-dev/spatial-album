@@ -4,8 +4,10 @@
     {
       "path": "../",
       "folder_exclude_patterns": [
+        ".vite",
+        "build",
+        "dist",
         "node_modules",
-        "dist"
       ],
     }
   ],
