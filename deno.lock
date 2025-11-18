@@ -2528,12 +2528,16 @@
   "workspace": {
     "dependencies": [
       "npm:@types/react@*",
+      "npm:@vitejs/plugin-react@*",
       "npm:@webspatial/builder@*",
       "npm:@webspatial/core-sdk@*",
       "npm:@webspatial/platform-visionos@*",
       "npm:@webspatial/react-sdk@*",
+      "npm:@webspatial/vite-plugin@*",
       "npm:react-dom@*",
-      "npm:react@*"
+      "npm:react@*",
+      "npm:vite-plugin-html@*",
+      "npm:vite@*"
     ]
   }
 }

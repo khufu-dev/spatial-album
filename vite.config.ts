@@ -1,7 +1,7 @@
-import { defineConfig } from "npm:vite";
-import react from "npm:@vitejs/plugin-react";
-import webSpatial from "npm:@webspatial/vite-plugin";
-import { createHtmlPlugin } from "npm:vite-plugin-html";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import webSpatial from "@webspatial/vite-plugin";
+import { createHtmlPlugin } from "vite-plugin-html";
 import process from "node:process";
 
 // https://vite.dev/config/
