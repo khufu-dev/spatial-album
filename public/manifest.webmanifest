@@ -1,7 +1,7 @@
 {
   "name": "Spatial Album",
   "short_name": "Album",
-  "start_url": "/webspatial/avp",
+  "start_url": "/webspatial/avp/",
   "icons": [
     {
       "src": "/icon-48.png",

@@ -15,7 +15,7 @@
     "clean": "rm -rf build dist node_modules",
     "dev": "deno run -P=vite npm:vite",
     "dev:avp": "XR_ENV=avp deno run -P=vite npm:vite",
-    "avp": "deno run -P=vite npm:@webspatial/builder/webspatial-builder run --base=http://localhost:5173/webspatial/avp",
+    "avp": "deno run -P=vite npm:@webspatial/builder/webspatial-builder run --base=http://localhost:5173",
     "build": "deno run -P=vite npm:vite build && XR_ENV=avp deno run -P=vite npm:vite build",
     "build:avp": "deno task build && deno run -P=vite npm:@webspatial/builder/webspatial-builder build --base= --bundle-id=com.picoxr.spatialalbum --teamId=KQNC4RNTJN",
     "preview": "deno run -P=vite npm:vite preview",
