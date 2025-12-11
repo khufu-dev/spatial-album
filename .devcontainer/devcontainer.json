@@ -1,0 +1,30 @@
+{
+  "name": "webspatial (Deno)",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "features": {
+    "ghcr.io/devcontainers-community/features/deno": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "deno cache deno.json",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite Dev Server"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "denoland.vscode-deno",
+      ],
+      "settings": {
+        "deno.enable": true,
+        "deno.lint": true,
+        "deno.suggest.imports.hosts": {
+          "npm:": true
+        }
+      }
+    }
+  }
+}
