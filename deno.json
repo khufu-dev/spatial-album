@@ -7,7 +7,7 @@
       "env": true,
       "ffi": true,
       "sys": ["cpus", "homedir", "networkInterfaces", "hostname"],
-      "net": ["localhost", "127.0.0.1:5173", "127.0.0.1:4173"],
+      "net": ["localhost", "127.0.0.1:5173", "127.0.0.1:4173", "0.0.0.0:5173", "[::]:5173"],
       "run": true
     }
   },
