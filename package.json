@@ -1,0 +1,32 @@
+{
+  "name": "spatial-album",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf build dist node_modules",
+    "dev": "vite",
+    "dev:avp": "XR_ENV=avp vite",
+    "avp": "webspatial-builder run --base=http://localhost:5173",
+    "build": "vite build && XR_ENV=avp vite build",
+    "build:avp": "npm run build && webspatial-builder build --base= --bundle-id=com.picoxr.spatialalbum --teamId=KQNC4RNTJN",
+    "preview": "vite preview",
+    "publish": "webspatial-builder publish --base= --bundle-id=com.picoxr.spatialalbum --teamId=KQNC4RNTJN --version=1.0.0 --u=$(op read op://Private/Apple/username) --p=$(op read op://Private/Apple/spatial-album-password)"
+  },
+  "dependencies": {
+    "@webspatial/builder": "1.3.0",
+    "@webspatial/core-sdk": "1.3.0",
+    "@webspatial/platform-visionos": "1.3.0",
+    "@webspatial/react-sdk": "1.3.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "@types/react": "19.2.14",
+    "@vitejs/plugin-react": "6.0.1",
+    "vite": "8.0.3",
+    "vite-plugin-html": "3.2.2",
+    "@webspatial/vite-plugin": "1.0.1"
+  }
+}
