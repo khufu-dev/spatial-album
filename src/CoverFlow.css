@@ -1,4 +1,5 @@
 .cards {
+  spatial: page;
   list-style: none;
   white-space: nowrap;
 }
@@ -7,6 +8,8 @@ li {
   display: inline-block;
   width: 15rem;
   height: 15rem;
+  transform-style: preserve-3d;
+  transform: translateZ(100px);
 }
 
 img {
