@@ -13,6 +13,11 @@
   ],
   "settings":
   {
+    "LSP": {
+      "LSP-typescript": {
+        "enabled": true
+      }
+    },
     "js_prettier": {
       "auto_format_on_save": true
     }
