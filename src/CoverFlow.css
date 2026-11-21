@@ -1,116 +1,75 @@
 :root {
-  --cover-size: 15rem;
-}
-
-@media (max-width: 1024px) {
-  :root {
-    --cover-size: 9rem;
-  }
-}
-
-@media (max-width: 600px) {
-  :root {
-    --cover-size: 6rem;
-  }
+  --cover-size: 50vmin;
 }
 
 /* Animation that rotates the cover */
 @keyframes rotate-cover {
   0% {
-    transform: translateX(-100%) rotateY(-55deg);
+    transform: translateX(-60%) rotateY(-45deg);
   }
-  38% {
-    transform: translateX(0) rotateY(-55deg);
+  35% {
+    transform: translateX(0) rotateY(-45deg);
   }
   50% {
-    transform: rotateY(0deg) translateZ(1em) scale(1.5);
+    transform: rotateY(0deg) translateZ(calc(var(--cover-size) * 0.5));
   }
-  62% {
-    transform: translateX(0) rotateY(55deg);
+  65% {
+    transform: translateX(0) rotateY(45deg);
   }
   100% {
-    transform: translateX(100%) rotateY(55deg);
+    transform: translateX(60%) rotateY(45deg);
   }
 }
 
 @keyframes adjust-z-index {
-  0% {
-    z-index: 1;
-  }
-  50% {
-    z-index: 100; /* when centered, bring to front */
-  }
+  0%,
   100% {
     z-index: 1;
   }
+  50% {
+    z-index: 10;
+  }
 }
 
-.coverFlow,
-.coverFlow * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-.coverFlow {
-  overflow-x: scroll;
+html {
   scroll-snap-type: x mandatory;
-  --size: 6;
-  min-height: calc(var(--cover-size) * 2.5);
-  margin: 0 auto;
-  padding: calc(var(--cover-size) / 3 * 2) 0;
-  position: relative;
-  perspective: 40em;
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  min-height: calc(100svh - 20px);
+  display: flex;
+  align-items: center;
 }
 
 .cards {
+  display: flex;
   list-style: none;
-  white-space: nowrap;
-  transform-style: preserve-3d;
+  margin: 0;
+  padding: 0 calc(50vw - var(--cover-size) / 2);
 }
 
 .cards li {
-  display: inline-block;
-  width: var(--cover-size);
-  height: var(--cover-size);
-  transform-style: preserve-3d;
+  flex: 0 0 var(--cover-size);
   scroll-snap-align: center;
-
-  view-timeline-name: --li-in-and-out-of-view;
-  view-timeline-axis: inline;
+  perspective: calc(var(--cover-size) * 2.5);
+  view-timeline: --card inline;
   animation: adjust-z-index linear both;
-  animation-timeline: --li-in-and-out-of-view;
-  perspective: 40em;
-}
-/* Because the total size is 6, with 1 cover in the middle, there’s space for 
-5 left … so 2.5 on each side */
-.cards li:first-of-type {
-  margin-left: calc(50% - var(--cover-size) / 2);
-}
-.cards li:last-of-type {
-  margin-right: calc(50% - var(--cover-size) / 2);
+  animation-timeline: --card;
 }
 
-.cards li img {
+.cards img {
   display: block;
   width: var(--cover-size);
-  height: var(--cover-size);
+  aspect-ratio: 1;
   object-fit: cover;
+  border-radius: 1em;
 
+  animation: rotate-cover linear both;
+  animation-timeline: --card;
+  will-change: transform;
   /* Reflection is slow on PICO Browser */
   /*-webkit-box-reflect: below 0.5em
     linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));*/
-
-  /* Track this element as it intersects the scrollport */
-  animation: linear rotate-cover both;
-  animation-timeline: --li-in-and-out-of-view;
-
-  /* Prevent FOUC with polfyill */
-  transform: translateX(-100%) rotateY(-45deg);
-  transform-style: preserve-3d;
-  will-change: transform;
-
-  position: relative;
-  user-select: none;
-  border-radius: 1em;
 }
