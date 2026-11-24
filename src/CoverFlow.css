@@ -38,6 +38,7 @@
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   align-content: center;
+  spatial: page;
 }
 
 .cards {
@@ -46,12 +47,15 @@
   list-style: none;
   margin: 0;
   padding: 0 calc((100% - var(--cover-size)) / 2);
+  position: relative;
+  inset-back: calc(var(--cover-size) / 2);
 }
 
 .cards li {
   flex: 0 0 var(--cover-size);
   scroll-snap-align: center;
   perspective: calc(var(--cover-size) * 2.5);
+  transform-style: preserve-3d;
   view-timeline: --card inline;
   animation: adjust-z-index linear both;
   animation-timeline: --card;
@@ -69,4 +73,5 @@
   /* Reflection is slow on PICO Browser */
   /*-webkit-box-reflect: below 0.5em
     linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));*/
+  inset-back: 0.1px;
 }
